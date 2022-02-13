@@ -20,10 +20,8 @@ try:
         data_raw = client_sock.recv(1024)
         # print "Daten bekommen: [%s]" % data_raw
 
-        data_string = str(data_raw)
-        data = data_string.replace("\n", "").replace("[", "").replace("]", "").replace("{", "").replace("}",
-                                                                                                        "").replace(
-            '"daten":', '').lstrip(' ')
+        data = str(data_raw)
+        # data = data_string.replace("\n", "").replace("[", "").replace("]", "").replace("{", "").replace("}","").replace('"daten":', '').lstrip(' ')
 
         dateiname = str('Daten/' + str(datetime.now().strftime('%d-%m-%Y_%H:%M:%S')) + '.txt')
         f = open(dateiname, 'w')
