@@ -33,6 +33,8 @@ try:
             os.system('sudo shutdown now')
         if data == 'reboot':
             os.system('sudo shutdown -r now')
+        if data == 'chromium-browser':
+            os.system('chromium-browser')
 
 except IOError:
     pass
