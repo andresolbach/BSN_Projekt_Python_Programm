@@ -34,7 +34,9 @@ try:
         if data == 'reboot':
             os.system('sudo shutdown -r now')
         if data == 'chromium-browser':
-            os.system('chromium-browser')
+            os.system('sudo chromium-browser')
+        if data == 'explorer':
+            os.system('sudo pcmanfm')
 
 except IOError:
     pass
